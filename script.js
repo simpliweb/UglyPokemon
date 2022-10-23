@@ -1,14 +1,24 @@
 const app = {};
 
-const pokemon = "charizard";
+// const pokemon = "charizard";
 
 //next step is to conenct input box from HTML to our API call using 'pokemon' const
 
 const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
 
-app.init = () => {
+// app.init = () => {
+//   // app.getApp();
+// };
+
+let pokemon = document.getElementById("pokemonInput").value;
+
+// console.log(pokemon);
+
+const btn = document.getElementById("getPokemon");
+
+btn.addEventListener(`click`, function (event) {
   app.getApp();
-};
+});
 
 app.getApp = () => {
   fetch(`${baseUrl}${pokemon}`)
@@ -36,6 +46,8 @@ app.getApp = () => {
         alert("something is wrong");
       }
     });
+
+  pokemon.value = "";
 };
 
-app.init();
+// app.init();
