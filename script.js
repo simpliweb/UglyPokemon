@@ -2,21 +2,59 @@ const app = {};
 
 const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
 
-// grab button from index.html
+const pokemonInput = document.getElementById("pokemonInput");  
+
+// grab getPokemon button from index.html
 const button = document.getElementById("getPokemon");
+// grab uglyRandomButton from index.html
+const uglyPokemonButton = document.getElementById("uglyRandom");
+// console.log(uglyPokemonButton)
+
+const uglyPokemonList = [ 
+"dracovish",  
+"darmanitan-standard",
+"gurdurr",
+"probopass",
+"mr-mime",
+"bruxish",
+"kricketune",
+"exploud",
+"crabominable",
+"grimer-alola",
+"guzzlord",
+"amoonguss",
+"vullaby",
+"slurpuff",
+"toxel",
+"cursola",
+"hippopotas",
+"rhyperior",
+];
 
 app.init = () => {
-  // add click event to the button 
-  button.addEventListener('click', e => {
-  // grab input from index.html  
-  const pokemonInput = document.getElementById("pokemonInput");
-  // print search result from input value
-    app.getApp(pokemonInput.value);
-  })
+  app.getUglyPokemon();
+  app.inputResult();
 };
 
-app.getApp = (pokemon) => {
+app.inputResult = () => {
+    // add click event to the button 
+  button.addEventListener('click', e => {  
+  // print search result from input value
+    app.getApp(pokemonInput.value);
+    // app.getUglyPokemon();
+  })
+}
+app.getUglyPokemon = () => {
+  uglyPokemonButton.addEventListener('click', e => {
+    // create a variable to get random result from the array
+    let result = uglyPokemonList[Math.floor(Math.random() * uglyPokemonList.length)];
+    console.log(result);
+    // link button result to the api call to show image inside image container
+    app.getApp(result);
+  })
+}
 
+app.getApp = (pokemon) => {
   fetch(`${baseUrl}${pokemon}`)
     .then((res) => {
       console.log(res);
@@ -31,7 +69,8 @@ app.getApp = (pokemon) => {
       const imgContainer = document.querySelector(".imageContainer");
       const img = document.createElement("img");
       // clear inside image container 
-      imgContainer.innerHTML = ``;
+      imgContainer.innerHTML = '';
+      pokemonInput.value = '';
       img.src = imgSrc;
       img.alt = `picture of ${pokemonInfo.name}`;
       imgContainer.appendChild(img);
@@ -46,4 +85,4 @@ app.getApp = (pokemon) => {
     });
 };
 
-// app.init();
+app.init();
