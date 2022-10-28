@@ -238,11 +238,16 @@ template {
 
 body {
   font-family: "Pokemon Solid", sans-serif;
+  background-image: url("./../assets/bodyBackground.jpeg");
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
   color: red;
   text-align: center;
+  font-size: 100px;
 }
 
 .searchBar {
