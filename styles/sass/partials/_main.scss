@@ -1,8 +1,8 @@
-
 .wrapper {
     max-width: 1280px;
     width: 90%;
     margin: 0 auto;
+    text-align: center;
 }
 
 body {
@@ -15,24 +15,39 @@ body {
 
 h1 {
     color: red;
-    text-align: center;
     font-size: 100px;
+}
+
+h2{
+    color:red;
+}
+
+.tip{
+    color:#ffcb05;
+    font-size:25px;
+    font-stretch:normal;
 }
 
 .searchBar {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;    
+    margin-bottom: 30px;
     
     input {
-        width: 40%;
-        padding: 10px 0;
+        width: 300px;
+        padding: 10px;
         text-align: center;
+        border:none; 
+        border-radius:8px;
     }
 }
 
 .contentContainer {
-    border: 2px solid black;
-    height: 50vh;
+    margin:70px auto;
+    height: 30vh;
+    width:550px;
+    border:5px groove red;
+    border-radius: 12px;
+    opacity: 90%;
 }
 

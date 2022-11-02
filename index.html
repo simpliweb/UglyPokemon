@@ -10,14 +10,18 @@
     <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
 </head>
 <body>
-    <div class="wrapper">
+    <header class="wrapper">
         <h1>PokeDex</h1>
-        
-        <!-- some guidance for user to navigate through the app -->
-        <div class="searchBar">
-            <input type="text" placeholder="Search your favortie Pokemon" id="pokemonInput">
-        </div>
+        <h2 class="tip">Type the name of your favorite Pokemon!</h2>
+    </header>
 
+    <main class="wrapper">
+        <form class="searchBar">
+            <label for="pokemonInput">
+                <input type="text" id="pokemonInput" placeholder="Search your favorite Pokemon" >
+            </label>
+        </form>
+        
         <button id="getPokemon"> Pokemon GO! </button>       
 
         <!-- css to style the input box  -->
@@ -26,8 +30,11 @@
             <h2 id="uglyName"></h2>
             <div class="imageContainer"></div>
             <!-- button as Stretch goal for random ugly pokemon -->
-            <button class="randomButton" id="uglyRandom"> Random Ugly Pokemon </button>
+            <button class="randomButton" id="uglyRandom"> Show me random Ugly Pokemon </button>
         </div>
-    </div>
+    </main>
+    <footer class="wrapper">
+        <p>Created at <a href="https://junocollege.com/" target=”_blank” >Juno College</a></p>
+    </footer>
 </body>
 </html>
