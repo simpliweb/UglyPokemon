@@ -6,48 +6,68 @@
 }
 
 body {
-    font-family: 'Pokemon Solid', sans-serif;
     background-image: url('./../assets/bodyBackground.jpeg');
     background-position: cover;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Poor Story', cursive;
+    height: 100vh;   
 }
 
-h1 {
+// .contentContainer 
+#uglyName {
+    text-transform: capitalize;
+    font-family: 'Bebas Neue', regular;
     color: red;
-    font-size: 100px;
-}
-
-h2{
-    color:red;
-}
-
-.tip{
-    color:#ffcb05;
-    font-size:25px;
-    font-stretch:normal;
+    font-size: 40px;
 }
 
 .searchBar {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 30px;    
     
     input {
         width: 300px;
         padding: 10px;
         text-align: center;
-        border:none; 
-        border-radius:8px;
+        border: none; 
+        border-radius: 8px;
+
+        &:hover,
+        &:focus {
+            color: red;
+            border: 2px solid;
+        }
     }
 }
 
 .contentContainer {
-    margin:70px auto;
-    height: 30vh;
-    width:550px;
+    margin: 80px auto 50px;
+    height: 40vh;
+    width: 50%;    
     border:5px groove red;
     border-radius: 12px;
     opacity: 90%;
+    padding-top: 25px;
+    position: relative;
+    
+    .imageContainer {
+        height: 200px;        
+
+        img {
+            width: 250px;
+            height: 200px;
+            
+        }
+    }
+
+    .randomButton {
+        height: 50px;
+        padding: 0 20px;
+        margin-bottom: 80px;
+        margin: 0 auto;
+        position: absolute;
+    }
 }
 

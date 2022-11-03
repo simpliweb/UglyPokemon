@@ -6,12 +6,22 @@ button{
     font-size:18px;
     font-weight: 700;
     padding:10px;
-    font-family: 'Pokemon Solid', sans-serif;
+
+    &:hover,
+    &:focus {
+        color: red;        
+    } 
 }
 
-#uglyRandom {
+.randomButton {
     margin-top: 5vh;
     background-color:red;
     color:white;
     border:none;
+
+    &:hover,
+    &:focus {
+        color: black;
+        border: 1px solid black;
+    }
 }

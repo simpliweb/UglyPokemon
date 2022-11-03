@@ -51,9 +51,8 @@ app.inputResult = () => {
     // add click event to the button 
   button.addEventListener('click', e => {  
   // print search result from input value
-    uglyName.textContent = '';
+    uglyName.innerHTML = pokemonInput.value;
     app.getApp(pokemonInput.value);
-    // app.getUglyPokemon();
   })
 }
 
@@ -69,12 +68,12 @@ app.getApp = (pokemon) => {
     }
     })
     .then((pokemonInfo) => {
-    const imgSrc = pokemonInfo.sprites.front_default;
+    const imgSrc = pokemonInfo.sprites.other['official-artwork'].front_default;
     const imgContainer = document.querySelector(".imageContainer");    
     const img = document.createElement("img");
-    // clear inside image container 
+    // clear inside image container     
     imgContainer.innerHTML = '';
-    pokemonInput.value = '';
+    pokemonInput.value = '';    
     img.src = imgSrc;
     img.alt = `picture of ${pokemonInfo.name}`;
     imgContainer.appendChild(img);

@@ -5,3 +5,20 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+.skipLink {
+    background-color: red;
+    color: black;
+    font-size: 1rem;
+    padding: 10px 0;
+    position: absolute;
+    left: -1000px;
+    top: 0;
+    z-index: 999;
+
+    &:focus {
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+}

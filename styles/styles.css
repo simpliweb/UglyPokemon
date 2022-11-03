@@ -230,6 +230,22 @@ template {
   overflow: hidden;
 }
 
+.skipLink {
+  background-color: red;
+  color: black;
+  font-size: 1rem;
+  padding: 10px 0;
+  position: absolute;
+  left: -1000px;
+  top: 0;
+  z-index: 999;
+}
+.skipLink:focus {
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
 .wrapper {
   max-width: 1280px;
   width: 90%;
@@ -238,26 +254,19 @@ template {
 }
 
 body {
-  font-family: "Pokemon Solid", sans-serif;
   background-image: url("./../assets/bodyBackground.jpeg");
   background-position: cover;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: "Poor Story", cursive;
+  height: 100vh;
 }
 
-h1 {
+#uglyName {
+  text-transform: capitalize;
+  font-family: "Bebas Neue", regular;
   color: red;
-  font-size: 100px;
-}
-
-h2 {
-  color: red;
-}
-
-.tip {
-  color: #ffcb05;
-  font-size: 25px;
-  font-stretch: normal;
+  font-size: 40px;
 }
 
 .searchBar {
@@ -276,14 +285,51 @@ h2 {
   border: none;
   border-radius: 8px;
 }
+.searchBar input:hover, .searchBar input:focus {
+  color: red;
+  border: 2px solid;
+}
 
 .contentContainer {
-  margin: 70px auto;
-  height: 30vh;
-  width: 550px;
+  margin: 80px auto 50px;
+  height: 40vh;
+  width: 50%;
   border: 5px groove red;
   border-radius: 12px;
   opacity: 90%;
+  padding-top: 25px;
+  position: relative;
+}
+.contentContainer .imageContainer {
+  height: 200px;
+}
+.contentContainer .imageContainer img {
+  width: 250px;
+  height: 200px;
+}
+.contentContainer .randomButton {
+  height: 50px;
+  padding: 0 20px;
+  margin-bottom: 80px;
+  margin: 0 auto;
+  position: absolute;
+}
+
+h1 {
+  color: red;
+  font-size: 100px;
+  font-family: "Pokemon Solid", sans-serif;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+.tip {
+  color: #ffcb05;
+  font-weight: 400;
+  font-size: 50px;
+  font-stretch: normal;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
 }
 
 button {
@@ -294,12 +340,18 @@ button {
   font-size: 18px;
   font-weight: 700;
   padding: 10px;
-  font-family: "Pokemon Solid", sans-serif;
+}
+button:hover, button:focus {
+  color: red;
 }
 
-#uglyRandom {
+.randomButton {
   margin-top: 5vh;
   background-color: red;
   color: white;
   border: none;
+}
+.randomButton:hover, .randomButton:focus {
+  color: black;
+  border: 1px solid black;
 }
