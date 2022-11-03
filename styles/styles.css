@@ -246,75 +246,6 @@ template {
   text-align: center;
 }
 
-.wrapper {
-  max-width: 1280px;
-  width: 90%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-body {
-  background-image: url("./../assets/bodyBackground.jpeg");
-  background-position: cover;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: "Poor Story", cursive;
-  height: 100vh;
-}
-
-#uglyName {
-  text-transform: capitalize;
-  font-family: "Bebas Neue", regular;
-  color: red;
-  font-size: 40px;
-}
-
-.searchBar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 30px;
-}
-.searchBar input {
-  width: 300px;
-  padding: 10px;
-  text-align: center;
-  border: none;
-  border-radius: 8px;
-}
-.searchBar input:hover, .searchBar input:focus {
-  color: red;
-  border: 2px solid;
-}
-
-.contentContainer {
-  margin: 80px auto 50px;
-  height: 40vh;
-  width: 50%;
-  border: 5px groove red;
-  border-radius: 12px;
-  opacity: 90%;
-  padding-top: 25px;
-  position: relative;
-}
-.contentContainer .imageContainer {
-  height: 200px;
-}
-.contentContainer .imageContainer img {
-  width: 250px;
-  height: 200px;
-}
-.contentContainer .randomButton {
-  height: 50px;
-  padding: 0 20px;
-  margin-bottom: 80px;
-  margin: 0 auto;
-  position: absolute;
-}
-
 h1 {
   color: red;
   font-size: 100px;
@@ -332,6 +263,91 @@ h1 {
   -webkit-text-stroke-color: black;
 }
 
+.wrapper {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body {
+  background-image: url("./../assets/bodyBackground.jpeg");
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Poor Story", cursive;
+  height: 130vh;
+  font-size: 30px;
+  font-size: 1.5rem;
+}
+
+#uglyName {
+  text-transform: capitalize;
+  font-family: "Bebas Neue", regular;
+  color: red;
+  font-size: 60px;
+  font-size: 3rem;
+}
+
+.listOfInstruction {
+  list-style-type: square;
+  font-size: 32px;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.listOfInstruction li {
+  margin-top: 10px;
+}
+.listOfInstruction li span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.searchBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+.searchBar input {
+  padding: 10px;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  font-size: 25px;
+  font-size: 1.25rem;
+  float: left;
+}
+.searchBar input:hover, .searchBar input:focus {
+  color: red;
+  border: 2px solid;
+}
+
+.contentContainer {
+  margin: 80px auto 50px;
+  height: 40vh;
+  width: 50%;
+  border: 5px groove red;
+  border-radius: 12px;
+  opacity: 90%;
+  padding-top: 25px;
+}
+.contentContainer .imageContainer {
+  height: 200px;
+}
+.contentContainer .imageContainer img {
+  width: 250px;
+  height: 200px;
+}
+
 button {
   background-color: yellow;
   border: 2px solid;
@@ -340,16 +356,17 @@ button {
   font-size: 18px;
   font-weight: 700;
   padding: 10px;
+  width: 50%;
 }
 button:hover, button:focus {
   color: red;
 }
 
 .randomButton {
-  margin-top: 5vh;
   background-color: red;
   color: white;
   border: none;
+  margin-bottom: 80px;
 }
 .randomButton:hover, .randomButton:focus {
   color: black;

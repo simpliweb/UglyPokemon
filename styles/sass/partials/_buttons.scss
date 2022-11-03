@@ -6,6 +6,7 @@ button{
     font-size:18px;
     font-weight: 700;
     padding:10px;
+    width: 50%;
 
     &:hover,
     &:focus {
@@ -14,10 +15,11 @@ button{
 }
 
 .randomButton {
-    margin-top: 5vh;
+    // margin-top: 5vh;
     background-color:red;
     color:white;
     border:none;
+    margin-bottom: 80px;
 
     &:hover,
     &:focus {
