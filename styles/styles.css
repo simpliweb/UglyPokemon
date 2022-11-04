@@ -257,7 +257,7 @@ h1 {
 .tip {
   color: #ffcb05;
   font-weight: 400;
-  font-size: 50px;
+  font-size: 40px;
   font-stretch: normal;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
@@ -281,24 +281,25 @@ body {
   font-size: 1.5rem;
 }
 
-#uglyName {
-  text-transform: capitalize;
-  font-family: "Bebas Neue", regular;
-  color: red;
-  font-size: 60px;
-  font-size: 3rem;
+.instruction {
+  background-color: aliceblue;
+  opacity: 0.8;
+  border-radius: 9px;
+  padding-top: 0;
+  margin-top: 0;
+  width: 50%;
+  margin: 0 auto;
 }
-
-.listOfInstruction {
+.instruction .listOfInstruction {
   list-style-type: square;
   font-size: 32px;
   font-size: 1.6rem;
   font-weight: 700;
 }
-.listOfInstruction li {
+.instruction .listOfInstruction li {
   margin-top: 10px;
 }
-.listOfInstruction li span {
+.instruction .listOfInstruction li span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -308,23 +309,14 @@ body {
           flex-direction: column;
 }
 
-.searchBar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 30px;
-}
 .searchBar input {
+  width: 50%;
   padding: 10px;
   text-align: center;
   border: none;
   border-radius: 8px;
   font-size: 25px;
   font-size: 1.25rem;
-  float: left;
 }
 .searchBar input:hover, .searchBar input:focus {
   color: red;
@@ -332,13 +324,31 @@ body {
 }
 
 .contentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 80px auto 50px;
   height: 40vh;
-  width: 50%;
+  width: 100%;
   border: 5px groove red;
   border-radius: 12px;
   opacity: 90%;
   padding-top: 25px;
+}
+.contentContainer .nameImageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.contentContainer .nameImageContainer #uglyName {
+  text-transform: capitalize;
+  font-family: "Bebas Neue", regular;
+  color: red;
+  font-size: 60px;
+  font-size: 3rem;
 }
 .contentContainer .imageContainer {
   height: 200px;
@@ -347,18 +357,45 @@ body {
   width: 250px;
   height: 200px;
 }
+.contentContainer .pokeDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contentContainer .pokeDetails .pokeInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 25px;
+}
+.contentContainer .pokeDetails .pokeInfo .tags {
+  margin: 10px 0;
+}
+.contentContainer .pokeDetails .pokeInfo h3 {
+  margin: 0 auto;
+  display: inline-block;
+}
 
 button {
-  background-color: yellow;
   border: 2px solid;
   border-radius: 8px;
-  color: #12314d;
-  font-size: 18px;
+  font-size: 30px;
+  font-size: 1.5rem;
   font-weight: 700;
   padding: 10px;
   width: 50%;
 }
-button:hover, button:focus {
+
+.getThePokemon {
+  background-color: yellow;
+  color: #12314d;
+  margin-top: 20px;
+}
+.getThePokemon:hover, .getThePokemon:focus {
   color: red;
 }
 
@@ -366,7 +403,7 @@ button:hover, button:focus {
   background-color: red;
   color: white;
   border: none;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 .randomButton:hover, .randomButton:focus {
   color: black;
@@ -408,6 +445,7 @@ button:hover, button:focus {
   h1 {
     padding-top: 8rem;
     font-size: 90px;
+    font-size: 4.5rem;
   }
   .contentContainer {
     width: 100%;

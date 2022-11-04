@@ -1,3 +1,4 @@
+//  -------header --------
 .wrapper {
     max-width: 1280px;
     width: 90%;
@@ -15,58 +16,73 @@ body {
     @include fontSize(30);
 }
 
-
-#uglyName {
-    text-transform: capitalize;
-    font-family: 'Bebas Neue', regular;
-    color: red;
-    @include fontSize(60);
-}
-
-.listOfInstruction {
-    list-style-type: square;
-    @include fontSize(32);
-    font-weight: 700;
-
-    li {
-        margin-top: 10px;
-        span {
-                display: flex;
-                flex-direction: column;        
-            }
-    }
-   
-}
-
-.searchBar {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px; 
+//  ------- section .instruction --------
+.instruction {   
+    background-color: aliceblue;
+    opacity: 0.8;
+    border-radius: 9px;
+    padding-top: 0;
+    margin-top:0;
+    width: 50%;
+    margin: 0 auto;
     
-    input {
+    .listOfInstruction {
+        list-style-type: square;
+        @include fontSize(32);
+        font-weight: 700;
+
+        li {
+            margin-top: 10px;
+            span {
+                    display: flex;
+                    flex-direction: column;        
+                }
+        }
+   
+    }
+}
+
+
+//  ------- form .searchBar --------
+.searchBar {
+    input {     
+        width: 50%;
         padding: 10px;
         text-align: center;
         border: none; 
         border-radius: 8px;
         @include fontSize(25);
-        float: left;
 
         &:hover,
         &:focus {
             color: red;
             border: 2px solid;
         }
-    }
+    } 
 }
 
+//  ------- div .contactContainer --------
 .contentContainer {
+    display: flex;
     margin: 80px auto 50px;
     height: 40vh;
-    width: 50%;    
-    border:5px groove red;
+    width: 100%;    
+    border: 5px groove red;
     border-radius: 12px;
     opacity: 90%;
     padding-top: 25px;
+
+    .nameImageContainer {
+        display: flex;
+        align-items: flex-start;
+
+        #uglyName {
+                text-transform: capitalize;
+                font-family: 'Bebas Neue', regular;
+                color: red;
+                @include fontSize(60);
+            }
+    }
     
     .imageContainer {
         height: 200px;        
@@ -77,6 +93,28 @@ body {
             
         }
     }
+
+    .pokeDetails{
+        display:flex;
+    
+        
+        
+       .pokeInfo {
+        display: flex;
+        flex-direction: column;
+        padding-top: 25px;
+
+        .tags {
+            margin: 10px 0;
+        }
+
+        h3 {
+            margin: 0 auto;
+            display: inline-block;
+        }
+    } 
+    }
+    
 
 }
 

@@ -27,10 +27,9 @@
 
         <section class="instruction">
             <h3> Instructions </h3>
-        
             <ul class="listOfInstruction">
                 <li>
-                    Search any type of Pokemon and press yello <span>'Pokemon Go' button to see the character.</span>
+                    Search any type of Pokemon and press yellow <span>'Pokemon Go' button to see the character.</span>
                 </li>
                 <li>
                     Press red 'Show me random Ugly Pokemon' <span>to see a random ugly Pokemon character.</span>                        
@@ -39,22 +38,39 @@
         </section>
 
         <form class="searchBar">
-            <label for="pokemonInput">
-                <input type="text" id="pokemonInput" placeholder="Search your favorite Pokemon" >
-            </label>
+            <div class="inputSearch">
+                <label for="pokemonInput">
+                    <input type="text" id="pokemonInput" placeholder="Search your favorite Pokemon" >
+                </label>
+
+                <button id="getPokemon" class="getThePokemon"> Pokemon GO! </button>
+            </div>
         </form>
         
-        <button id="getPokemon"> Pokemon GO! </button>      
+          
 
         
         <div class="contentContainer">
-            <h2 id="uglyName"></h2>
-            <h3 id="heightTag"></h3><h3 id="height"></h3>
-            <h3 id="weightTag"></h3><h3 id="weight"></h3>
-            <h3 id="typeTag"></h3><h3 id="type"></h3>
-            <div class="imageContainer"></div>
-            <!-- button as Stretch goal for random ugly pokemon -->
-            
+            <div class="nameImageContainer">
+                <h2 id="uglyName"></h2>
+            </div>
+            <div class="pokeDetails">
+                <div class="imageContainer"></div>
+                <div class="pokeInfo">                
+                    <div class="tags">
+                        <h3 id="heightTag"></h3>
+                        <h3 id="height"></h3>
+                    </div>
+                    <div class="tags">
+                        <h3 id="weightTag"></h3>
+                        <h3 id="weight"></h3>
+                    </div>
+                    <div class="tags">
+                        <h3 id="typeTag"></h3>
+                        <h3 id="type"></h3>
+                    </div> 
+                </div>    
+            </div>
         </div>
         <div class="randomUglyButton">        
             <button class="randomButton" id="uglyRandom"> Show me random Ugly Pokemon </button>

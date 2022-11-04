@@ -18,7 +18,6 @@ const typeTag = document.getElementById("typeTag");
 
 const uglyPokemonList = [
   "dracovish",
-  "darmanitan-standard",
   "gurdurr",
   "probopass",
   "mr-mime",
