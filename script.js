@@ -1,10 +1,9 @@
 const app = {};
 
-const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
+const baseUrl = "https://aqueous-plateau-43351.herokuapp.com/https://pokeapi.co/api/v2/pokemon/";
 
 const pokemonInput = document.getElementById("pokemonInput");
-
-const button = document.getElementById("getPokemon");
+const getPokemonButton = document.getElementById("getPokemon");
 const uglyPokemonButton = document.getElementById("uglyRandom");
 const uglyName = document.getElementById("uglyName");
 const height = document.getElementById("height");
@@ -13,6 +12,7 @@ const type = document.getElementById("type");
 const heightTag = document.getElementById("heightTag");
 const weightTag = document.getElementById("weightTag");
 const typeTag = document.getElementById("typeTag");
+const imgContainer = document.querySelector(".imageContainer");
 
 const uglyPokemonList = [
   "dracovish",
@@ -51,9 +51,17 @@ app.getUglyPokemon = () => {
 
 // app.inputResult shows searched Pokemon from input and displays pokemon inside .contentCotainer 
 app.inputResult = () => {
-  button.addEventListener("click", (e) => {
-    uglyName.textContent = pokemonInput.value;
-    app.getApp(pokemonInput.value);
+  getPokemonButton.addEventListener("click", (e) => {    
+    e.preventDefault(); 
+    uglyName.textContent = pokemonInput.value; 
+    app.getApp(pokemonInput.value.toLowerCase());
+    imgContainer.innerHTML = "";    
+    heightTag.innerHTML = "";
+    weightTag.innerHTML = "";
+    typeTag.innerHTML = "";
+    height.innerHTML = "";
+    weight.innerHTML = "";
+    type.innerHTML = "";
   });
 };
 
@@ -68,9 +76,8 @@ app.getApp = (pokemon) => {
       }
     })
     .then((pokemonInfo) => {
-      const imgSrc =
+      const imgSrc = 
         pokemonInfo.sprites.other["official-artwork"].front_default;
-      const imgContainer = document.querySelector(".imageContainer");
       const img = document.createElement("img");
       imgContainer.innerHTML = "";
       pokemonInput.value = "";
@@ -84,7 +91,6 @@ app.getApp = (pokemon) => {
       weight.innerHTML = `${pokemonInfo.weight}`;
       type.innerHTML = `${pokemonInfo.types["0"].type.name}`;
     })
-
     .catch((error) => {
       console.log(error);
       if (error.message === "Not Found") {
@@ -92,7 +98,7 @@ app.getApp = (pokemon) => {
       } else {
         alert("Waiting for your input!");
       }
-    });
+    })
 };
 
 app.init();

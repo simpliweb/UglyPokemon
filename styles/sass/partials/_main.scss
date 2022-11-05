@@ -64,13 +64,15 @@ body {
 //  ------- div .contactContainer --------
 .contentContainer {
     display: flex;
-    margin: 80px auto 50px;
+    flex-direction: column;    
     height: 40vh;
-    width: 100%;    
+    width: 50%;    
     border: 5px groove red;
     border-radius: 12px;
     opacity: 90%;
-    padding-top: 25px;
+    margin: 80px auto;
+    padding: 50px 0;
+    align-items: center;
 
     .nameImageContainer {
         display: flex;
