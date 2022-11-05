@@ -4,9 +4,7 @@ const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
 
 const pokemonInput = document.getElementById("pokemonInput");
 
-// grab getPokemon button from index.html
 const button = document.getElementById("getPokemon");
-// grab uglyRandomButton from index.html
 const uglyPokemonButton = document.getElementById("uglyRandom");
 const uglyName = document.getElementById("uglyName");
 const height = document.getElementById("height");
@@ -41,22 +39,20 @@ app.init = () => {
   app.inputResult();
 };
 
+// app.getUglyPokemon grabs random list of ugly pokemons from uglyPokemonList array and displays inside .contentCotainer
 app.getUglyPokemon = () => {
   uglyPokemonButton.addEventListener("click", (e) => {
-    // create a variable to get random result from the array
     let result =
       uglyPokemonList[Math.floor(Math.random() * uglyPokemonList.length)];
     uglyName.textContent = `${result}`;
-    // link button result to the api call to show image inside image container
     app.getApp(result);
   });
 };
 
+// app.inputResult shows searched Pokemon from input and displays pokemon inside .contentCotainer 
 app.inputResult = () => {
-  // add click event to the button
   button.addEventListener("click", (e) => {
-    // print search result from input value
-    uglyName.innerHTML = pokemonInput.value;
+    uglyName.textContent = pokemonInput.value;
     app.getApp(pokemonInput.value);
   });
 };
@@ -76,7 +72,6 @@ app.getApp = (pokemon) => {
         pokemonInfo.sprites.other["official-artwork"].front_default;
       const imgContainer = document.querySelector(".imageContainer");
       const img = document.createElement("img");
-      // clear inside image container
       imgContainer.innerHTML = "";
       pokemonInput.value = "";
       img.src = imgSrc;

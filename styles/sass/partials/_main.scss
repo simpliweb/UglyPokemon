@@ -96,25 +96,22 @@ body {
 
     .pokeDetails{
         display:flex;
-    
-        
         
        .pokeInfo {
         display: flex;
         flex-direction: column;
         padding-top: 25px;
 
-        .tags {
-            margin: 10px 0;
-        }
+            .tags {
+                margin: 10px 0;
+            }
 
-        h3 {
-            margin: 0 auto;
-            display: inline-block;
-        }
-    } 
-    }
-    
+            h3 {
+                margin: 0 auto;
+                display: inline-block;
+            }
+        } 
+    }    
 
 }
 
