@@ -1,6 +1,6 @@
 const app = {};
 
-const baseUrl = "https://aqueous-plateau-43351.herokuapp.com/https://pokeapi.co/api/v2/pokemon/";
+const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
 
 const pokemonInput = document.getElementById("pokemonInput");
 const getPokemonButton = document.getElementById("getPokemon");
@@ -68,7 +68,6 @@ app.inputResult = () => {
 app.getApp = (pokemon) => {
   fetch(`${baseUrl}${pokemon}`)
     .then((res) => {
-      console.log(res);
       if (res.ok === true) {
         return res.json();
       } else {
@@ -92,7 +91,6 @@ app.getApp = (pokemon) => {
       type.innerHTML = `${pokemonInfo.types["0"].type.name}`;
     })
     .catch((error) => {
-      console.log(error);
       if (error.message === "Not Found") {
         alert("Pick a pokemon that exists! Input the correct pokemon name.");
       } else {
