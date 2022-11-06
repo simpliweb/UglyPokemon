@@ -33,12 +33,11 @@ body {
 
         li {
             margin-top: 10px;
-            span {
-                    display: flex;
-                    flex-direction: column;        
-                }
+            // span {
+            //         display: flex;
+            //         flex-direction: column;        
+            //     }
         }
-   
     }
 }
 
@@ -78,7 +77,7 @@ body {
         display: flex;
         align-items: flex-start;
 
-        #uglyName {
+        .uglyNameTitle {
                 text-transform: capitalize;
                 font-family: 'Bebas Neue', regular;
                 color: red;

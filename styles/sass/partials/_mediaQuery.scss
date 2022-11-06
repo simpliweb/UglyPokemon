@@ -1,12 +1,13 @@
-/* Bigger desktops */
+/* Bigger desktops 1280*760 */
 @media (max-width: 1280px) {
     body{
-        height:130vh;
+        height:190vh;
     }
     h1{
-        padding-top:5rem;
+        padding-top:15rem;
         
     }
+    
     .contentContainer{
         height:50vh;
         padding-top:0;
@@ -16,10 +17,15 @@
     }
 }
 
-/* Portrait tablet and small desktops */
+/* Portrait tablet and small desktops  1024*768 */
 @media (max-width: 1024px) {
+    
     body{
-        height:120vh;
+        height:190vh;
+        
+        .wrapper{
+        width:100%;
+        }
     }
     h1{
         margin-top:10rem;
@@ -30,19 +36,72 @@
     }
 }
 
-/* Landscape phone to portrait tablet */
+/* Landscape phone to portrait tablet 768*896*/
 @media (max-width: 768px) {
+    body {
+        height: 170vh;
+        .wrapper {
+            width: 80%;
+        } 
+    }
+    .instruction,
+    .searchBar,
+    .contentContainer,
+    .randomUglyButton{
+        width:100%;
+    }
+    .searchBar,
+    .randomUglyButton{
+        margin: 0 auto;
+    }
 
+    .searchBar {
+        input{
+            width: 100%;
+        }
+    }
+    button{
+        width:100%;
+    }
+    #uglyName{
+        padding-top: 20px;
+    }
 }
 
-/* Landscape phones and down */
+/* Landscape phones and down 480*896 */
 @media (max-width: 480px) {
+    body{
+        height: 170vh;
+        .wrapper{
+            width:98%;
+        }
+    }
     h1{
-        padding-top:8rem;
+        padding-top:16rem;
         @include fontSize(90);
     }
-    .contentContainer {
-       width:100%; 
+    .instruction,
+    .searchBar,
+    .contentContainer,
+    .randomUglyButton {
+        width: 95%;
     }
-}
+    .listOfInstruction{
+        width:100%;
+        padding-left: 15px;
+    }
+    .searchBar,
+    .randomUglyButton {
+        margin: 0 auto;
+    }
+    .searchBar{
+        input{
+            width:100%;
+        }
+    }
+    button{
+        width:100%;
+        }
+    }
+
 

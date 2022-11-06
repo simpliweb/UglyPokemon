@@ -299,15 +299,6 @@ body {
 .instruction .listOfInstruction li {
   margin-top: 10px;
 }
-.instruction .listOfInstruction li span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
 
 .searchBar input {
   width: 50%;
@@ -350,7 +341,7 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
 }
-.contentContainer .nameImageContainer #uglyName {
+.contentContainer .nameImageContainer .uglyNameTitle {
   text-transform: capitalize;
   font-family: "Bebas Neue", regular;
   color: red;
@@ -417,13 +408,13 @@ button {
   border: 1px solid black;
 }
 
-/* Bigger desktops */
+/* Bigger desktops 1280*760 */
 @media (max-width: 1280px) {
   body {
-    height: 130vh;
+    height: 190vh;
   }
   h1 {
-    padding-top: 5rem;
+    padding-top: 15rem;
   }
   .contentContainer {
     height: 50vh;
@@ -433,10 +424,13 @@ button {
     margin-bottom: 20px;
   }
 }
-/* Portrait tablet and small desktops */
+/* Portrait tablet and small desktops  1024*768 */
 @media (max-width: 1024px) {
   body {
-    height: 120vh;
+    height: 190vh;
+  }
+  body .wrapper {
+    width: 100%;
   }
   h1 {
     margin-top: 10rem;
@@ -446,15 +440,65 @@ button {
     margin-top: 0;
   }
 }
-/* Landscape phone to portrait tablet */
-/* Landscape phones and down */
+/* Landscape phone to portrait tablet 768*896*/
+@media (max-width: 768px) {
+  body {
+    height: 170vh;
+  }
+  body .wrapper {
+    width: 80%;
+  }
+  .instruction,
+.searchBar,
+.contentContainer,
+.randomUglyButton {
+    width: 100%;
+  }
+  .searchBar,
+.randomUglyButton {
+    margin: 0 auto;
+  }
+  .searchBar input {
+    width: 100%;
+  }
+  button {
+    width: 100%;
+  }
+  #uglyName {
+    padding-top: 20px;
+  }
+}
+/* Landscape phones and down 480*896 */
 @media (max-width: 480px) {
+  body {
+    height: 170vh;
+  }
+  body .wrapper {
+    width: 98%;
+  }
   h1 {
-    padding-top: 8rem;
+    padding-top: 16rem;
     font-size: 90px;
     font-size: 4.5rem;
   }
-  .contentContainer {
+  .instruction,
+.searchBar,
+.contentContainer,
+.randomUglyButton {
+    width: 95%;
+  }
+  .listOfInstruction {
+    width: 100%;
+    padding-left: 15px;
+  }
+  .searchBar,
+.randomUglyButton {
+    margin: 0 auto;
+  }
+  .searchBar input {
+    width: 100%;
+  }
+  button {
     width: 100%;
   }
 }
