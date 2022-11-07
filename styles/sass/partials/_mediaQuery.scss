@@ -1,18 +1,13 @@
 /* Bigger desktops 1280*760 */
 @media (max-width: 1280px) {
-    body{
-        height:190vh;
+    body {
+        height: 190vh;
     }
-    // h1{
-    //     padding-top:15rem;
-        
-    // }
     
     .contentContainer{
-        // height:50vh;
-        padding-top:0;
+        padding-top: 0;
         padding-bottom: 0;
-        margin-top:20px;
+        margin-top: 20px;
         margin-bottom: 20px;
     }
 }
@@ -21,14 +16,13 @@
 @media (max-width: 1024px) {
     
     body{
-        height:190vh;
+        height: 190vh;
         
         .wrapper{
-        width:100%;
+        width: 100%;
         }
     }
     h1{
-        // margin-top:10rem;
         margin-bottom: 0;
     }
     h2{
@@ -48,7 +42,7 @@
     .searchBar,
     .contentContainer,
     .randomUglyButton{
-        width:100%;
+        width: 100%;
     }
     .searchBar,
     .randomUglyButton{
@@ -56,51 +50,58 @@
     }
 
     .searchBar {
-        input{
+        input {
             width: 100%;
         }
     }
-    button{
+
+    button {
         width:100%;
     }
-    #uglyName{
+
+    #uglyName {
         padding-top: 20px;
     }
 }
 
 /* Landscape phones and down 480*896 */
 @media (max-width: 480px) {
-    body{
+    body {
         height: 170vh;
-        .wrapper{
-            width:98%;
+        .wrapper {
+            width: 98%;
         }
     }
-    h1{
-        // padding-top:16rem;
+
+    h1 {
         @include fontSize(90);
     }
+
     .instruction,
     .searchBar,
     .contentContainer,
     .randomUglyButton {
         width: 95%;
     }
-    .listOfInstruction{
-        width:100%;
+
+    .listOfInstruction {
+        width: 100%;
         padding-left: 15px;
     }
+
     .searchBar,
     .randomUglyButton {
         margin: 0 auto;
     }
-    .searchBar{
-        input{
-            width:100%;
+
+    .searchBar {
+        input {
+            width: 100%;
         }
     }
-    button{
-        width:100%;
+
+    button {
+        width: 100%;
         }
     }
 

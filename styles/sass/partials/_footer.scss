@@ -1,4 +1,9 @@
 //  -------footer --------
-footer{
+footer {
     padding-top: 100px;
+
+    p, a { 
+        @include fontSize(50);
+        color: yellow;
+    }
 }
