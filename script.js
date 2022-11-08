@@ -85,6 +85,7 @@ app.inputResult = () => {
 };
 
 app.getApp = (pokemon) => {
+  nameImageContainer.style.display = "none";
   fetch(`${baseUrl}${pokemon}`)
     .then((res) => {
       if (res.ok === true) {
@@ -112,6 +113,7 @@ app.getApp = (pokemon) => {
       type.innerHTML = `${pokemonInfo.types["0"].type.name}`;
       pokeDetails.style.backgroundColor = `rgba(255, 255, 255, 0.45)`;
       nameImageContainer.style.backgroundColor = `rgba(255, 255, 255, 0.45)`;
+      nameImageContainer.style.display = "block";
     })
     .catch((error) => {
       if (error.message === "Not Found") {
